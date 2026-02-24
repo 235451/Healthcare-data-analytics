@@ -1,0 +1,4 @@
+model:
+  name: RandomForest
+  n_estimators: 300
+  max_depth: 10

@@ -1,0 +1,278 @@
+/* =========================================================
+GOVERNMENT HOSPITAL AI HEALTHCARE SYSTEM
+Streamlit Custom CSS
+   ========================================================= */
+
+/* -------------------------
+ROOT VARIABLES
+--------------------------*/
+:root {
+    --primary-color: #0b5ed7;        /* Govt Blue */
+    --secondary-color: #198754;      /* Health Green */
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #0dcaf0;
+
+    --bg-light: #f8f9fa;
+    --bg-dark: #0e1117;
+
+    --card-bg: #ffffff;
+    --card-border: #dee2e6;
+
+    --text-primary: #212529;
+    --text-secondary: #6c757d;
+
+    --radius: 12px;
+    --shadow-soft: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+/* -------------------------
+STREAMLIT GLOBAL OVERRIDES
+--------------------------*/
+html, body, [class*="css"] {
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Remove Streamlit padding */
+.block-container {
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"] {
+    background-color: #0b3c91;
+    color: #ffffff;
+}
+
+section[data-testid="stSidebar"] h1,
+section[data-testid="stSidebar"] h2,
+section[data-testid="stSidebar"] h3 {
+    color: #ffffff;
+}
+
+/* Sidebar buttons */
+section[data-testid="stSidebar"] button {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #ffffff;
+    border-radius: 8px;
+}
+
+/* -------------------------
+HEADERS & TITLES
+--------------------------*/
+h1 {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+h2 {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+h3 {
+    color: #343a40;
+    font-weight: 600;
+}
+
+/* -------------------------
+CARDS
+--------------------------*/
+.card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+    padding: 1.5rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid var(--card-border);
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.card-subtitle {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* -------------------------
+METRIC BOXES
+--------------------------*/
+.metric-box {
+    text-align: center;
+    padding: 1rem;
+    border-radius: var(--radius);
+    background: linear-gradient(135deg, #e7f1ff, #ffffff);
+    border: 1px solid #d0e3ff;
+}
+
+.metric-box h4 {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.metric-box span {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* -------------------------
+RISK BADGES
+--------------------------*/
+.badge {
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.badge-low {
+    background: #d1e7dd;
+    color: #0f5132;
+}
+
+.badge-medium {
+    background: #fff3cd;
+    color: #664d03;
+}
+
+.badge-high {
+    background: #f8d7da;
+    color: #842029;
+}
+
+.badge-critical {
+    background: #dc3545;
+    color: #ffffff;
+}
+
+/* -------------------------
+ALERTS
+--------------------------*/
+.alert {
+    padding: 1rem;
+    border-radius: var(--radius);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.alert-info {
+    background: #cff4fc;
+    color: #055160;
+}
+
+.alert-warning {
+    background: #fff3cd;
+    color: #664d03;
+}
+
+.alert-danger {
+    background: #f8d7da;
+    color: #842029;
+}
+
+/* -------------------------
+FORMS
+--------------------------*/
+input, select, textarea {
+    border-radius: 8px !important;
+    border: 1px solid #ced4da !important;
+}
+
+/* Submit button */
+button[kind="primary"] {
+    background-color: var(--primary-color) !important;
+    border-radius: 10px !important;
+    font-weight: 600;
+}
+
+/* -------------------------
+MEDICAL TIMELINE
+--------------------------*/
+.timeline {
+    position: relative;
+    margin-left: 20px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: #dee2e6;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 1rem;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -6px;
+    top: 4px;
+    width: 14px;
+    height: 14px;
+    background: var(--primary-color);
+    border-radius: 50%;
+}
+
+/* -------------------------
+CHATBOT UI
+--------------------------*/
+.chat-container {
+    background: #f1f3f5;
+    padding: 1rem;
+    border-radius: var(--radius);
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.chat-user {
+    background: #0b5ed7;
+    color: white;
+    padding: 0.6rem;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+    text-align: right;
+}
+
+.chat-ai {
+    background: #e9ecef;
+    color: #212529;
+    padding: 0.6rem;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+}
+
+/* -------------------------
+FOOTER
+--------------------------*/
+.footer {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #adb5bd;
+    margin-top: 2rem;
+}
+
+/* -------------------------
+MOBILE RESPONSIVE
+--------------------------*/
+@media (max-width: 768px) {
+    .metric-box h4 {
+        font-size: 1.2rem;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+}
